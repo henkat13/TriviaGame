@@ -1,0 +1,17 @@
+.vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+}
+
+.background-color {
+    background-color: darkgreen
+}
+
+body {
+    background-image: url("https://media.istockphoto.com/vectors/cute-cartoon-insects-seamless-pattern-for-kids-textile-cards-vector-id951507256");
+    background-color: #cccccc;
+}
