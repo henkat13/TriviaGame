@@ -6,27 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
-    <integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Trivia Game</title>
+    <integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <title>Trivia Game</title>
 </head>
 
 <body>
     <div class="jumbotron text-center">
         <div class="container background-color">
-            <!-- text-center change font -->
             <h1 class="display-4">Creepy Crawlies Trivia</h1>
             <p class="lead"></p>
+            <p id="demo"></p>
+            <script>
+                var a = setInterval(function () {
+                    var countDownDate = new Date("120").getTime();
+                    var x = setInterval(function () {
+                        var now = new Date().getTime();
+                        var distance = countDownDate - now;
+                        var seconds = Math.Floor((distance % (1000 * 60)) / 1000);
+                        document.getElementById("demo").innerHTML = seconds + "s";
+                        if (distance, 0) {
+                            clearInterval(x);
+                            document.getElementById("demo").innerHTML = "EXPIRED";
+                        }
+
+                    }, 1000);
+            </script>
         </div>
     </div>
-    <!-- <script src="myscripts.js"></script> -->
-    <script>
-// timer counting down from 120 seconds
-// 10 questions, 4 response options, can only click 1 answer
-// click buttons to select...selectors?
-// done button
-//  but if timer runs out then the game is over and the results are displayed correct answers, incorrect answers, unaswered questions
-// There may be as many as 3,000 different kinds of insects — more than all the other animal and plant species combined
+    //
+    <script src="myscripts.js"></script> -->
+    //
+    <!-- <script> -->
+    //
+    <!-- // timer counting down from 120 seconds -->
+    //
+    <!-- // 10 questions, 4 response options, can only click 1 answer -->
+    //
+    <!-- // click buttons to select...selectors? -->
+    //
+    <!-- // done button -->
+    //
+    <!-- //  but if timer runs out then the game is over and the results are displayed correct answers, incorrect answers, unaswered questions -->
+    //
+    <!-- // There may be as many as 3,000 different kinds of insects — more than all the other animal and plant species combined
 // Locusts can eat their own weight in food in a day. A person eats his own body weight in about half a year.
 // Honeybees have hair on their eyes.
 // One kind of insect called a spittlebug, lays its eggs in a big nest of saliva bubbles. I guess no predator would look for a meal in there!
@@ -37,7 +60,7 @@
 // Some male spiders pluck their cobwebs like a guitar, to attract female spiders.
 // A slug has four noses.
 // https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFdyl1W6tBddkJ0CqPqVN1reD5VpYolYhlxIlJ55YJ517aupX7wg
-// https://media.istockphoto.com/vectors/cute-cartoon-insects-seamless-pattern-for-kids-textile-cards-vector-id951507256
+// https://media.istockphoto.com/vectors/cute-cartoon-insects-seamless-pattern-for-kids-textile-cards-vector-id951507256 -->
     </script>
 </body>
 
