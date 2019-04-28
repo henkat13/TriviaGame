@@ -9,6 +9,8 @@
     <integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/css/style.css">
         <title>Trivia Game</title>
+
+
 </head>
 
 <body>
@@ -17,50 +19,65 @@
             <h1 class="display-4">Creepy Crawlies Trivia</h1>
             <p class="lead"></p>
             <p id="demo"></p>
-            <script>
-                var a = setInterval(function () {
-                    var countDownDate = new Date("120").getTime();
-                    var x = setInterval(function () {
-                        var now = new Date().getTime();
-                        var distance = countDownDate - now;
-                        var seconds = Math.Floor((distance % (1000 * 60)) / 1000);
-                        document.getElementById("demo").innerHTML = seconds + "s";
-                        if (distance, 0) {
-                            clearInterval(x);
-                            document.getElementById("demo").innerHTML = "EXPIRED";
-                        }
 
-                    }, 1000);
-            </script>
+
+
         </div>
     </div>
-    //
-    <script src="myscripts.js"></script> -->
-    //
-    <!-- <script> -->
-    //
-    <!-- // timer counting down from 120 seconds -->
-    //
-    <!-- // 10 questions, 4 response options, can only click 1 answer -->
-    //
-    <!-- // click buttons to select...selectors? -->
-    //
-    <!-- // done button -->
-    //
-    <!-- //  but if timer runs out then the game is over and the results are displayed correct answers, incorrect answers, unaswered questions -->
-    //
-    <!-- // There may be as many as 3,000 different kinds of insects — more than all the other animal and plant species combined
-// Locusts can eat their own weight in food in a day. A person eats his own body weight in about half a year.
-// Honeybees have hair on their eyes.
-// One kind of insect called a spittlebug, lays its eggs in a big nest of saliva bubbles. I guess no predator would look for a meal in there!
-// A snail can sleep for 3 years straight
-// The weight of all the termites in the world outweigh the weight of all humans 10 to 1!
-// A cockroach can live for up to 3 weeks without its head!
-// The female black widow’s poison is 15 times deadlier than a rattlesnake’s!
-// Some male spiders pluck their cobwebs like a guitar, to attract female spiders.
-// A slug has four noses.
-// https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFdyl1W6tBddkJ0CqPqVN1reD5VpYolYhlxIlJ55YJ517aupX7wg
-// https://media.istockphoto.com/vectors/cute-cartoon-insects-seamless-pattern-for-kids-textile-cards-vector-id951507256 -->
+    <div class="card-group">
+        <div class="card">
+
+            <div class="card-body">
+                <h5 class="card-title">Question 1</h5>
+                <p class="card-text">Can Locusts can eat their own weight in food in a day?</p>
+                <p class="card-text"><small class="text-muted">Choose your answer</small></p>
+                <button id="button1">Yes</button>
+                <button id="button2">No</button>
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="card-body">
+                <h5 class="card-title">Question 2</h5>
+                <p class="card-text">What do Honeybees have on their eyes?</p>
+                <p class="card-text"><small class="text-muted">Choose your answer</small></p>
+                <button id="button3">Special eye lids</button>
+                <button id="button4">Hair</button>
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="card-body">
+                <h5 class="card-title">Question 3</h5>
+                <p class="card-text">How poisonous is the female black widow’s poison than a rattlesnake's?</p>
+                <p class="card-text"><small class="text-muted">Choose your answer</small></p>
+                <button id="button5">5 times more</button>
+                <button id="button6">15 times more</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var theQuestion = [" Can Locusts can eat their own weight in food in a day?", " What do Honeybees have on their eyes?", "How poisonous is the female black widow’s poison? "]
+        var theAnswers = ["Yes", "Hair", "15 times more"]
+
+        $("button").click(function () {
+            var userAnswer = $(this).text();
+            console.log(userAnswer);
+            if (theAnswers.indexOf(userAnswer) > -1) {
+                alert("correct");
+
+            }
+            else alert("incorrect")
+        })
+        setTimeout(function() {
+            console.log("1200");
+        })
+
+
     </script>
 </body>
 
